@@ -104,10 +104,10 @@ class gopher_email:
 
     def check_if_sender_is_an_authorized_sender(self):
 
-        # list of authorized users for Gopher
+        # list of authorized users for Gopher (changed for public display)
         list_of_authorized_users   =    [   '''firstname_lastname1@example.com''',
                                             '''firstname_lastname2@example.com''',
-                                            '''firstname_lastname3@example.com''']
+                                            '''firstname_lastname3@example.com'''] 
 
         # this gets the actual email address as a string (ex: John.Doe@Pepsico.com). Other one in earlier method is an outlook object.
         self.sender_email_address = self.gopher_inbox.Items[self.most_recent_email_index].Sender.GetExchangeUser().PrimarySmtpAddress
@@ -235,7 +235,7 @@ class sterling_integrator_navigation():
 
     def get_to_SI_home_page(self):
 
-        self.driver.get('Pepsico IBM Sterling Integrator WebApp URL')
+        self.driver.get('Pepsico IBM Sterling Integrator WebApp URL') # actual URL changed for public display
 
     def login_to_SI(self, driver, wait, user_gpid, user_password):
 
@@ -261,7 +261,7 @@ class sterling_integrator_navigation():
         wait.until(EC.frame_to_be_available_and_switch_to_it((By.ID, 'IframeConsolePanel')))
         wait.until(EC.frame_to_be_available_and_switch_to_it((By.NAME, 'basefrm')))
         wait.until(EC.element_to_be_clickable((By.ID,'autoCompleteBPNameSource')))
-        driver.find_element_by_id('autoCompleteBPNameSource').send_keys('PepsiCo Archive File Process Name')
+        driver.find_element_by_id('autoCompleteBPNameSource').send_keys('PepsiCo Archive File Process Name') # changed for public display
         wait.until(EC.visibility_of_element_located((By.NAME, 'Go2')))
         wait.until(EC.element_to_be_clickable((By.NAME,'Go2')))
         driver.find_element_by_name('Go2').click() 
