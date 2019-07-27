@@ -1,0 +1,2 @@
+# ECG_bot_public
+ECG bot is a python bot I've written to automate routine tasks I do frequently at my job (PepsiCo). When I first created this bot, it was named gopher and would fetch files. I envisioned that it would run 24/7 on an ECG server, checking once a minute for emails, and fetching files if it found any. Putting it on a PepsiCo server may or may not happen as PepsiCo isn't interested in supporting custom-written python + selenium. It's still a tool I can use for myself so I keep developing it in my spare time.
